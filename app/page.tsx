@@ -22,7 +22,7 @@ export default function Home() {
         </div>
 
         <div className="mt-8 text-sm text-gray-600 dark:text-gray-400">
-          <p>If you have any questions, please contact us at support@alqaswamarine.com</p>
+          <p>If you have any questions, please contact us at alqaswamarine.com</p>
         </div>
       </main>
     </div>
