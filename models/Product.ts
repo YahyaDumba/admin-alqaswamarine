@@ -15,7 +15,7 @@ export interface IProduct extends Document {
   currency?: string;
   partNumber?: string;
   manufacturer?: string;
-  model?: string;
+  modelName?: string;
   yearManufactured?: number;
   weight?: number;
   dimensions?: {
@@ -98,7 +98,7 @@ const ProductSchema: Schema<IProduct> = new Schema(
       type: String,
       trim: true,
     },
-    model: {
+    modelName: {
       type: String,
       trim: true,
     },

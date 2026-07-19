@@ -7,7 +7,7 @@ const protectedRoutes = ['/dashboard', '/products', '/settings'];
 // Routes only accessible when NOT logged in
 const authRoutes = ['/login', '/signup'];
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl;
     const token = request.cookies.get('token')?.value;
     const isAuthenticated = Boolean(token);
