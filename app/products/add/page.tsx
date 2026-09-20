@@ -6,19 +6,6 @@ import { FiArrowLeft, FiUpload, FiX, FiPlus } from 'react-icons/fi';
 import AdminLayout from '@/components/AdminLayout';
 import toast from 'react-hot-toast';
 
-const categories = [
-  'Engine',
-  'Turbocharger',
-  'Fuel Pump',
-  'Crankshaft',
-  'Cylinder Head',
-  'Generator',
-  'Compressor',
-  'Navigation Equipment',
-];
-
-const brands = ['MAN B&W', 'MAK', 'Wartsila', 'Sulzer', 'Caterpillar'];
-
 const conditions = ['Used', 'Refurbished', 'New'];
 
 const statuses = ['Draft', 'Published'];
@@ -362,37 +349,27 @@ function ProductFormInner() {
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Category *
                     </label>
-                    <select
+                    <input
+                      type="text"
                       value={category}
                       onChange={(e) => setCategory(e.target.value)}
+                      placeholder="e.g. Engine"
                       className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
                       required
-                    >
-                      <option value="">Select category</option>
-                      {categories.map((cat) => (
-                        <option key={cat} value={cat}>
-                          {cat}
-                        </option>
-                      ))}
-                    </select>
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Brand *
                     </label>
-                    <select
+                    <input
+                      type="text"
                       value={brand}
                       onChange={(e) => setBrand(e.target.value)}
+                      placeholder="e.g. MAN B&W"
                       className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
                       required
-                    >
-                      <option value="">Select brand</option>
-                      {brands.map((b) => (
-                        <option key={b} value={b}>
-                          {b}
-                        </option>
-                      ))}
-                    </select>
+                    />
                   </div>
                 </div>
 
